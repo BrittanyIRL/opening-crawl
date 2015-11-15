@@ -1,0 +1,83 @@
+/*THE PLAN: 
+
+h2: long long ago -  light blue, left align, far far startis new line
+
+h1: star wars - needs to be hollow, yellow, adjust size of s for length, center align
+
+h4: center, light yellow
+
+h3: yellow, upper case, center
+
+p: justify, yellow 
+
+
+font-family: 'Oswald', sans-serif;
+h1: #FFEA1D
+light yellow: #FFFF6C
+teal: #00EDED;
+*/
+
+/* universals */
+
+body {
+	width: 100%;
+	height: 100%;
+	background-image: url('../images/background.jpg');
+	background-repeat: repeat;
+	display: block;
+       /* -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;*/
+    margin: 0;
+	font-size: 16px;
+	font-family: 'Oswald', sans-serif;
+}
+
+
+
+h2, h1, h3, h4, p {
+	width: 60%;
+	margin: 0 auto;
+}
+/*a long long time ago...*/
+
+h2 {
+	color: #00EDED;
+	text-align: left;
+	font-size: 4em;
+	margin-top: 10%;
+}
+
+/* STAR WARS */
+h1 {
+	color: #FFEA1D;
+	text-align: center;
+	font-size: 10em;
+	margin-top: 40%;
+}
+
+/*Episode Title */
+
+h4, h3 {
+	color: #FFFF6C;
+	text-align: center;
+	font-size: 5em;
+}
+h4 {
+	margin-top: 30%
+}
+
+h3 {
+	text-transform: uppercase;
+	margin-bottom: 5%;
+}
+
+/*crawl */
+
+p {
+	color: #FFFF6C;
+	text-align: justify;
+	font-size: 4em;
+	padding-bottom: 2em;
+}
+
