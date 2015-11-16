@@ -106,14 +106,11 @@ p {
 
 }
 
-
-
-/*magic time */
-
-.magictime {
--webkit-animation-duration: 3s;
--moz-animation-duration: 3s;
--o-animation-duration: 3s;
-animation-duration: 3s;
+.upper {
+	text-transform: uppercase;
 }
+
+
+
+
 

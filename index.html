@@ -2,7 +2,6 @@
 <html>
 <head>
 	<link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="css/distantgalaxy/stylesheet.css" type="text/css" charset="utf-8" />
 
 	<link rel="stylesheet" type="text/css" href="styles/animate.css">
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
@@ -12,12 +11,14 @@
 </head>
 <body>
 <div class="container">
-<h2 class="fade">A long long time ago, in a galaxy far far away... </h2> <!-- blue, left align, far, far should start new line -->
+<h2 class="fade" id="animation">A long long time ago, in a galaxy far far away... </h2> <!-- blue, left align, far, far should start new line -->
 <!--center -->
-<div class="starwars">
-	<h1 class="star">Star </h1><br><h1 class="wars"> Wars</h1> <!--yellow, hollow, adjust kerning -->
+<div class="animationTrigger">
+	<div class="starwars">
+		<h1 class="star">Star </h1><br><h1 class="wars"> Wars</h1> <!--yellow, hollow, adjust kerning -->
+	</div>
 </div>
-	<div>
+	<div class="animationTrigger2">
 <!--light yellow -->
 	<div class="scrollme fade">
 		<div class="animateme" 
@@ -36,7 +37,7 @@
       	Episode VI </h4> <!--center -->
 		<h3>Return of the Jedi</h3><!--all upper case, center -->
 		<!--justify -->
-		<p>
+		<p class="letterCrawl">
 		Luke Skywalker has returned
 		to his home planet of
 		Tatooine in an attempt to
@@ -67,9 +68,11 @@
 <!--jquery cdn -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/jquery.lettering.js"></script>
-<script src="js/jquery.scrollme.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+<script type="text/javascript" src="js/jquery.scrollme.js"></script>
 <!-- my javascript -->
 <script type="text/javascript" src="js/script.js"></script>
 
