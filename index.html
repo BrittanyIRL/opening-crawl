@@ -3,6 +3,7 @@
 <head>
 	<link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+
 	<title>Star Crawl</title>
 
 </head>
@@ -10,43 +11,59 @@
 <div class="container">
 <h2>A long long time ago, in a galaxy far far away... </h2> <!-- blue, left align, far, far should start new line -->
 <!--center -->
-<h1>Star Wars</h1> <!--yellow, hollow, adjust kerning -->
-
+<div>
+	<h1>Star Wars</h1> <!--yellow, hollow, adjust kerning -->
+</div>
+	<div>
 <!--light yellow -->
-<h4>Episode VI </h4> <!--center -->
-<h3>Return of the Jedi</h3><!--all upper case, center -->
+	<div class="scrollme">
+		<div class="animateme" 
+		data-when="enter"
+        data-from="6.5"
+        data-to="0"
+        data-crop="false"
+        data-opacity="1"
+        data-scale="1.5"
+        data-rotatex="80"
+        data-easing="easeout">
+		<h4>
 
-<!--justify -->
-<p>Luke Skywalker has returned to
-his home planet of Tatooine in
-an attempt to rescue his
-friend Han Solo from the
-clutches of the vile gangster
-Jabba the Hutt.
-</p>
-<p>
-Little does Luke know that the
-<span class="upper">galactic empire</span> has secretly
-begun construction on a new
-armored space station even
-more powerful than the first
-dreaded Death Star.
-</p>
-<p>
-When completed, this ultimate
-weapon will spell certain doom
-for the small band of rebels
-struggling to restore freedom
-to the galaxy...
-</p>
+      	Episode VI </h4> <!--center -->
+		<h3>Return of the Jedi</h3><!--all upper case, center -->
+		<!--justify -->
+		<p>
+		Luke Skywalker has returned
+		to his home planet of
+		Tatooine in an attempt to
+		rescue his friend Han Solo from 
+		the clutches of the vile
+		gangster Jabba the Hutt.
+		</p>
+		<p>
+		Little does Luke know that the
+		<span class="upper">galactic empire</span> has secretly
+		begun construction on a new
+		armored space station even
+		more powerful than the first
+		dreaded Death Star.
+		</p>
+		<p>
+		When completed, this ultimate
+		weapon will spell certain doom
+		for the small band of rebels
+		struggling to restore freedom
+		to the galaxy...
+		</p>
+		</div>
+	</div>
 </div><!-- end container -->
 
 
 <!--jquery cdn -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- letteringjs -->
-<script src="js/jquery.lettering.js"></script>
+<script src="js/jquery.scrollme.js"></script>
 <!-- my javascript -->
 <script type="text/javascript" src="js/script.js"></script>
+
 </body>
 </html>
