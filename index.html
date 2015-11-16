@@ -11,57 +11,52 @@
 </head>
 <body>
 <div class="container">
-<h2 class="fade" id="animation">A long long time ago, in a galaxy far far away... </h2> <!-- blue, left align, far, far should start new line -->
+	<section id="one">
+		<div class="outerS1">
+			<div class="innerS2">
+				<h2 class="fade" id="animation">A long long time ago, in a galaxy far far away... </h2> <!-- blue, left align, far, far should start new line -->
+			</div>
+		</div>
+	</section>
 <!--center -->
-<div class="animationTrigger">
-	<div class="starwars">
-		<h1 class="star">Star </h1><br><h1 class="wars"> Wars</h1> <!--yellow, hollow, adjust kerning -->
-	</div>
-</div>
-	<div class="animationTrigger2">
-<!--light yellow -->
-	<div class="scrollme fade">
-		<div class="animateme" 
-		data-when="enter"
-        data-from="10.5"
-        data-to="0"
-        data-crop="false"
-       	
-       	data-translatez="20000"
-        data-scale="2."
-        data-rotatex="-80"
-        data-scalez="20000"
-        data-easing="easeout">
-		<h4>
-
-      	Episode VI </h4> <!--center -->
-		<h3>Return of the Jedi</h3><!--all upper case, center -->
-		<!--justify -->
-		<p class="letterCrawl">
-		Luke Skywalker has returned
-		to his home planet of
-		Tatooine in an attempt to
-		rescue his friend Han Solo from 
-		the clutches of the vile
-		gangster Jabba the Hutt.
-		</p>
-		<p>
-		Little does Luke know that the
-		<span class="upper">galactic empire</span> has secretly
-		begun construction on a new
-		armored space station even
-		more powerful than the first
-		dreaded Death Star.
-		</p>
-		<p>
-		When completed, this ultimate
-		weapon will spell certain doom
-		for the small band of rebels
-		struggling to restore freedom
-		to the galaxy...
-		</p>
+	<div class="animationTrigger">
+		<div class="starwars">
+			<h1 class="star">Star </h1><br><h1 class="wars"> Wars</h1> <!--yellow, hollow, adjust kerning -->
 		</div>
 	</div>
+	<section id="two">
+		<div class="outerS2">
+	<!--light yellow -->
+			<div class="innerS2">
+			<h4>Episode VI </h4> <!--center -->
+			<h3>Return of the Jedi</h3><!--all upper case, center -->
+			<!--justify -->
+			<p>
+			Luke Skywalker has returned
+			to his home planet of
+			Tatooine in an attempt to
+			rescue his friend Han Solo from 
+			the clutches of the vile
+			gangster Jabba the Hutt.
+			</p>
+			<p>
+			Little does Luke know that the
+			<span class="upper">galactic empire</span> has secretly
+			begun construction on a new
+			armored space station even
+			more powerful than the first
+			dreaded Death Star.
+			</p>
+			<p>
+			When completed, this ultimate
+			weapon will spell certain doom
+			for the small band of rebels
+			struggling to restore freedom
+			to the galaxy...
+			</p>
+			</div>
+		</div>
+	</section>
 </div><!-- end container -->
 
 
@@ -71,8 +66,8 @@
 
 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
-<script type="text/javascript" src="js/jquery.scrollme.js"></script>
 <!-- my javascript -->
 <script type="text/javascript" src="js/script.js"></script>
 

@@ -40,9 +40,23 @@ body {
     margin: 0;
 	font-size: 16px;
 	font-family: 'Oswald', sans-serif;
+	position: absolute;
 }
 
+.outerS1{
+	position: absolute;
+	width: 100%;
+	min-height: 800px;
+}
 
+.starwars {
+	margin-top: 1000px;
+	margin-bottom: 600px
+}
+
+#two {
+	margin-top: 1200px;
+}
 
 h2, h1, h3, h4, p {
 	width: 60%;
