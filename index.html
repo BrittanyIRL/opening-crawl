@@ -2,6 +2,9 @@
 <html>
 <head>
 	<link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/distantgalaxy/stylesheet.css" type="text/css" charset="utf-8" />
+
+	<link rel="stylesheet" type="text/css" href="styles/animate.css">
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 
 	<title>Star Crawl</title>
@@ -9,22 +12,24 @@
 </head>
 <body>
 <div class="container">
-<h2>A long long time ago, in a galaxy far far away... </h2> <!-- blue, left align, far, far should start new line -->
+<h2 class="fade">A long long time ago, in a galaxy far far away... </h2> <!-- blue, left align, far, far should start new line -->
 <!--center -->
-<div>
-	<h1>Star Wars</h1> <!--yellow, hollow, adjust kerning -->
+<div class="starwars">
+	<h1 class="star">Star </h1><br><h1 class="wars"> Wars</h1> <!--yellow, hollow, adjust kerning -->
 </div>
 	<div>
 <!--light yellow -->
-	<div class="scrollme">
+	<div class="scrollme fade">
 		<div class="animateme" 
 		data-when="enter"
-        data-from="6.5"
+        data-from="10.5"
         data-to="0"
         data-crop="false"
-        data-opacity="1"
-        data-scale="1.5"
-        data-rotatex="80"
+       	
+       	data-translatez="20000"
+        data-scale="2."
+        data-rotatex="-80"
+        data-scalez="20000"
         data-easing="easeout">
 		<h4>
 
@@ -61,7 +66,10 @@
 
 <!--jquery cdn -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/jquery.lettering.js"></script>
 <script src="js/jquery.scrollme.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 <!-- my javascript -->
 <script type="text/javascript" src="js/script.js"></script>
 

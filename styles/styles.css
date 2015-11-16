@@ -18,6 +18,18 @@ teal: #00EDED;
 */
 
 /* universals */
+@font-face {
+    font-family: 'distant_galaxyregular';
+    src: url('DISTGRG_-webfont.eot');
+    src: url('DISTGRG_-webfont.eot?#iefix') format('embedded-opentype'),
+         url('DISTGRG_-webfont.woff') format('woff'),
+         url('DISTGRG_-webfont.ttf') format('truetype'),
+         url('DISTGRG_-webfont.svg#distant_galaxyregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 
 body {
 	width: 100%;
@@ -46,13 +58,26 @@ h2 {
 }
 
 /* STAR WARS */
+.star {
+	margin-top: 40%;
+	margin-bottom: -70px;
+}
+.wars {
+	margin-top: 0;
+	padding-top: -10px;
+}
 h1 {
-	color: #FFEA1D;
+	color: #000;
 	text-align: center;
 	font-size: 10em;
-	margin-top: 40%;
+	-webkit-text-stroke: 4px #FFEA1D;
+	font-weight: 800;
+	font-family: 'distant_galaxyregular';
 }
 
+.char1, .char9 {
+
+}
 /*Episode Title */
 
 h4, h3 {
@@ -78,14 +103,17 @@ p {
 	text-align: justify;
 	font-size: 4em;
 	padding-bottom: 2em;
-/*	-webkit-perspective: 900px;
-	-webkit-perspective-origin: 25% 75%;
-	transform: rotateX( 50deg );
-*/
+
 }
 
 
 
 /*magic time */
 
+.magictime {
+-webkit-animation-duration: 3s;
+-moz-animation-duration: 3s;
+-o-animation-duration: 3s;
+animation-duration: 3s;
+}
 
