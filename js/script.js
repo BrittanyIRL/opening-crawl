@@ -66,7 +66,7 @@ $(document).ready(function(){
     	},
         {
         	scale: 4,
-        	transform: "rotateX(-80deg) rotateY(-40deg)",
+        	transform: "translate3d(80deg,80deg,90deg)",
          	left: 400
         });
 	var lettersScene = new ScrollMagic.Scene({
@@ -74,21 +74,15 @@ $(document).ready(function(){
 	 }).setTween(letters).triggerElement($('.innerS2')[0])
 	.addTo(ctrl);
 
-	var tie = TweenMax.fromTo('.tie', 3,
+	var tie = TweenMax.from('.tieMove', 3,
 	{
-		scale: 1,
-		opacity: 0
+		scale: 8,
+		left: -400
 
-	},
-	{
-		opacity: 1,
-		scale: 5,
-		yPercent: 50,
-		xPercent: 100
 	});
 	var tieScene = new ScrollMagic.Scene({
-		duration: 400 }).setTween(tie).triggerElement($('.tie')[0]).addTo(ctrl);
-	})
+		duration: 4000 }).setTween(tie).triggerElement($('.tie')[0]).addTo(ctrl);
+
 
 
     //lettering.js

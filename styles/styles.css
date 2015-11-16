@@ -124,6 +124,30 @@ p {
 	text-transform: uppercase;
 }
 
+#tie {
+	width: 150px;
+}
+.tie {
+	position: relative;
+	bottom: 200px;
+	right:-100px;
+	-webkit-transition: 3s ease-in-out;
+    -moz-transition: 3s ease-in-out;
+    -o-transition: 3s ease-in-out;
+    transition: 3s ease-in-out;
+
+}
+.tieMove{
+	 -webkit-transform: translate(740px,-500px);
+    -moz-transform: translate(740px,-500px);
+    -o-transform: translate(740px,-500px);
+    -ms-transform: translate(740px,-500px);
+    transform: translate(740px,-500px);
+    width: 300px;
+    z-index: -999;
+
+}
+
 
 
 
