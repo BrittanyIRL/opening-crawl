@@ -65,9 +65,8 @@ $(document).ready(function(){
          	left: -400
     	},
         {
-        	scale: -3,
-        	opacity: .3,
-        	transform: "rotateX(-40) rotateY(-200deg)",
+        	scale: 4,
+        	transform: "rotateX(-80deg) rotateY(-40deg)",
          	left: 400
         });
 	var lettersScene = new ScrollMagic.Scene({
@@ -75,65 +74,22 @@ $(document).ready(function(){
 	 }).setTween(letters).triggerElement($('.innerS2')[0])
 	.addTo(ctrl);
 
+	var tie = TweenMax.fromTo('.tie', 3,
+	{
+		scale: 1,
+		opacity: 0
 
+	},
+	{
+		opacity: 1,
+		scale: 5,
+		yPercent: 50,
+		xPercent: 100
+	});
+	var tieScene = new ScrollMagic.Scene({
+		duration: 400 }).setTween(tie).triggerElement($('.tie')[0]).addTo(ctrl);
+	})
 
-//old scroll
-
-	// Init ScrollMagic Controller
- //  	var scrollMagicController = new ScrollMagic();
-  	
- //  	//animates "star wars" to fade out repeatedly
- //  	var tween = TweenMax.fromTo('.animationTrigger', 4,
- //        {
- //            scale: 5,
- //         	left: -400
- //    	},
- //        {
- //         scale: 0,
- //         left: 400,
- //         repeat: -1, /* Aka infinite amount of repeats */
- //         yoyo: false /* Make it go back and forth */
- //        });
-  
-	//   // Create the Scene and trigger when visible
-	//   var scene = new ScrollScene({
-	//     triggerElement: '.starwars',
-	//     duration: 700 /* How many pixels to scroll / animate */
-	//   	}).setTween(tween).addTo(scrollMagicController).addIndicators();
-  
-	//   // Add debug indicators fixed on right side
-	 
-	// //should fade crawl text at top of page
-	//   var tween2 = TweenMax.fromTo('.animationTrigger2', 4,
- //        {
- //            scale: 5,
- //         	left: -400
- //    	},
- //        {
- //         scale: 0,
- //         left: 400,
- //         repeat: -1, /* Aka infinite amount of repeats */
- //         yoyo: false /* Make it go back and forth */
- //        });
-  
-	//   // Create the Scene and trigger when visible
-	//   var scene2 = new ScrollScene({
-	//     triggerElement: '.letterCrawl',
-	//     duration: 700 /* How many pixels to scroll / animate */
-	//   	}).setTween(tween2).addTo(scrollMagicController).addIndicators();
-
-	  //adds tweens to controller
-		// scrollMagicController.addScene([
-  // 			scene,
-  // 			bg_tween
-		// ]);
-  
-
-
-
-	//animate.css
-	//$('.fade').addClass('animated fadeOut');
-    //$('.starwars').addClass('animated zoomOut');
 
     //lettering.js
 	$(".star").lettering();
