@@ -15,6 +15,9 @@ font-family: 'Oswald', sans-serif;
 h1: #FFEA1D
 light yellow: #FFFF6C
 teal: #00EDED;
+
+NOTES:
+use animation-play-state with fullpageJS to control playing;
 */
 
 /* universals */
@@ -43,26 +46,16 @@ body {
 	position: absolute;
 }
 
-.outerS1{
+/* a long long time ago blue fade in out */
+#one{
 	position: absolute;
 	width: 100%;
 	min-height: 800px;
+	opacity: 0; /*to change using keyframes */
+	animation: one 6s ease-out 1s;
+	animation-fill-mode: forwards;
 }
 
-.starwars {
-	margin-top: 1000px;
-	margin-bottom: 600px
-}
-
-#two {
-	margin-top: 1200px;
-}
-
-h2, h1, h3, h4, p {
-	width: 60%;
-	margin: 0 auto;
-}
-/*a long long time ago...*/
 
 h2 {
 	color: #00EDED;
@@ -71,7 +64,21 @@ h2 {
 	margin-top: 10%;
 }
 
-/* STAR WARS */
+/*TITLES */
+
+#two{
+	padding-top: 2em;
+	animation: two 4s ease-out 1s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+	position: absolute;
+}
+
+.starwars {
+	margin-top: 1000px;
+	margin-bottom: 600px
+}
+
 .star {
 	margin-top: 40%;
 	margin-bottom: -70px;
@@ -92,64 +99,112 @@ h1 {
 .char1, .char9 {
 
 }
-/*Episode Title */
+
+/*letter crawl */
+
+/*font stuff */
+
+h2, h1, h3, h4, p {
+	width: 60%;
+	margin: 0 auto;
+}
 
 h4, h3 {
 	color: #FFFF6C;
 	text-align: center;
 	font-size: 5em;
 }
-h4 {
-	margin-top: 30%
-}
 
 h3 {
 	text-transform: uppercase;
-	margin-bottom: 5%;
 }
-
-/*crawl */
-
-
 
 p {
 	color: #FFFF6C;
 	text-align: justify;
-	font-size: 4em;
+	font-size: 7em;
 	padding-bottom: 2em;
-
 }
 
 .upper {
 	text-transform: uppercase;
 }
 
+/* text body, fades into background */
+
+#three {
+	overflow: hidden; /*so that scroll works with fullpagejs */
+	transform: perspective(200px); /*this does nothing right now*/
+}
+/*
+.outerS2:after {
+	position: absolute;
+	content: ' ';
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 60%;
+	background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+	pointer-events: none;
+}
+
+.innerS2 {
+	position: absolute;
+	top: 100%;
+	animation: scroll 100s linear 4s infinite;
+}
+@keyframes scroll {
+	0% { top: 100%; }
+	100% { top: -170%; }
+}*/
+
+/*easter egg tie fighter */
+
 #tie {
 	width: 150px;
 }
 .tie {
 	position: relative;
-	bottom: 200px;
-	right:-100px;
-	-webkit-transition: 3s ease-in-out;
+	bottom: 100px;
+	right:-20px;
+	-webkit-transition: 2s ease-in-out;
     -moz-transition: 3s ease-in-out;
     -o-transition: 3s ease-in-out;
     transition: 3s ease-in-out;
 
+
 }
-.tieMove{
+.tie:hover{
 	 -webkit-transform: translate(740px,-500px);
     -moz-transform: translate(740px,-500px);
     -o-transform: translate(740px,-500px);
     -ms-transform: translate(740px,-500px);
     transform: translate(740px,-500px);
-    width: 300px;
-    z-index: -999;
-
+    z-index: -9999;
 }
 
 
 
+/* KEY FRAMES ***/
+
+/* fades in long long time ago and stays there */
+
+@keyframes one {
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes two {
+	0% {
+		transform: scale(2.75);
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+		transform: scale(.1);
+	}
+}
 
 
 

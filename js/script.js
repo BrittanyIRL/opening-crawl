@@ -28,15 +28,15 @@ $(document).ready(function(){
 	});
 
 
-	var longLongAgo = TweenMax.from($outerS1, 1, {
+	var longLongAgo = TweenMax.from($outerS1, 2, {
     opacity: 0,
     ease: Cubic.easeIn
 	});
 	var longLongAgoScene = new ScrollMagic.Scene({
-    duration: '70%'
+    duration: '40%'
 	})
 	.setTween(longLongAgo)
-	.triggerElement($('.innerS1')[0])
+	.triggerElement($('.container')[0])
 	.addTo(ctrl);
 
 	
@@ -52,36 +52,23 @@ $(document).ready(function(){
          yoyo: false /* Make it go back and forth */
         });
 	var introScene = new ScrollMagic.Scene({
-	  	duration: 700 /* How many pixels to scroll / animate */
+	  	duration: 500 /* How many pixels to scroll / animate */
 	 }).setTween(intro).triggerElement($('.starwars')[0])
 	.addTo(ctrl);
   
 
 
-	var letters = TweenMax.fromTo('.outerS2 div', 3,
-        {
-        	scale: 2,
-   			opacity: 1,
-         	left: -400
-    	},
-        {
-        	scale: 4,
-        	transform: "translate3d(80deg,80deg,90deg)",
-         	left: 400
-        });
-	var lettersScene = new ScrollMagic.Scene({
-	  	duration: 5000 /* How many pixels to scroll / animate */
-	 }).setTween(letters).triggerElement($('.innerS2')[0])
-	.addTo(ctrl);
 
-	var tie = TweenMax.from('.tieMove', 3,
-	{
-		scale: 8,
-		left: -400
+
+	var crawl = new TimelineMax()
+	.from(currentArticle.find('section > header.food_header > hgroup'), 3, {opacity:0, top:'-40px', ease: Power4.easeOut}, 0)
+	.from(currentArticle.find('section > summary > p'), 3, {opacity:0, top:'40px', ease: Power4.easeOut}, 0);
+
+	var scene = new ScrollScene({triggerElement: currentArticle, triggerHook:.3})
+	.setTween(crawl)
+	.addTo(controller);
 
 	});
-	var tieScene = new ScrollMagic.Scene({
-		duration: 4000 }).setTween(tie).triggerElement($('.tie')[0]).addTo(ctrl);
 
 
 
