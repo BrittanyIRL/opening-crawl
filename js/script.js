@@ -1,79 +1,60 @@
 $(document).ready(function(){
 	console.log('hello world');
 	
-	var wh = window.innerHeight,
-		$outerS1 = $('.outerS1'),
-		$innerS1 = $('.innerS1'),
-		$outerS2 = $('.outerS2'),
-		$innerS2 = $('.innerS2');
-	//scrollmagic
+	//using fullpage js to control animation starts and stops
+	$('#fullpage').fullpage({
+		lockAnchors: false,
+		anchors:['IV', 'V', 'VI'],
+		navigation: true,
+		navigationPosition: 'right',
+		showActiveTooltip: false,
+		slidesNavigation: true,
+		css3: true,
+		scrollingSpeed: 1500,
+		autoScrolling: true,
+		fitToSection: true,
+		fitToSectionDelay: 3000,
+		scrollBar: false,
+		easing: 'easeIn',
+		easingcss3: 'ease',
+		loopBottom: false,
+		loopTop: false,
+		continuousVertical: false,		
+		touchSensitivity: 2,
+		normalScrollElementTouchThreshold: 90,
+		keyboardScrolling: true,
+		animateAnchor: true,
+		recordHistory: false,
+		controlArrows: false,
+        verticalCentered: true,
+        resize : true,
+        // sectionsColor : ['#ccc', '#fff'],
+        // paddingTop: '3em',
+        // paddingBottom: '10px',
+        // fixedElements: '#header, .footer',
+        responsiveWidth: 0,
+        responsiveHeight: 0,
 
+        //Custom selectors
+        sectionSelector: '.section',
+        slideSelector: '.slide',
 
-	// init
-	var ctrl = new ScrollMagic.Controller({
-	    globalSceneOptions: {
-	        triggerHook: 'onLeave'
-	    }
+        //events
+        onLeave: function(index, nextIndex, direction){},
+        afterLoad: function(anchorLink, index){},
+        afterRender: function(){},
+        afterResize: function(){},
+        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+        onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
 	});
-	 
-	// Create scenes
-	$("section").each(function() {
-	   
-	    new ScrollMagic.Scene({
-	        triggerElement: this,
-	        duration: '50%'
-	    })
-	    .setPin(this)
-	    .addTo(ctrl);
-	});
-
-
-	var longLongAgo = TweenMax.from($outerS1, 2, {
-    opacity: 0,
-    ease: Cubic.easeIn
-	});
-	var longLongAgoScene = new ScrollMagic.Scene({
-    duration: '40%'
-	})
-	.setTween(longLongAgo)
-	.triggerElement($('.container')[0])
-	.addTo(ctrl);
-
-	
-	var intro = TweenMax.fromTo('.starwars', 3,
-        {
-            scale: 4,
-         	left: -400
-    	},
-        {
-         scale: 0,
-         left: 400,
-         repeat: -1, /* Aka infinite amount of repeats */
-         yoyo: false /* Make it go back and forth */
-        });
-	var introScene = new ScrollMagic.Scene({
-	  	duration: 500 /* How many pixels to scroll / animate */
-	 }).setTween(intro).triggerElement($('.starwars')[0])
-	.addTo(ctrl);
-  
-
-
-
-
-	var crawl = new TimelineMax()
-	.from(currentArticle.find('section > header.food_header > hgroup'), 3, {opacity:0, top:'-40px', ease: Power4.easeOut}, 0)
-	.from(currentArticle.find('section > summary > p'), 3, {opacity:0, top:'40px', ease: Power4.easeOut}, 0);
-
-	var scene = new ScrollScene({triggerElement: currentArticle, triggerHook:.3})
-	.setTween(crawl)
-	.addTo(controller);
-
-	});
-
 
 
     //lettering.js
 	$(".star").lettering();
 	$(".wars").lettering();
+
+	//triggering animation on visibility
+
+
 
 });

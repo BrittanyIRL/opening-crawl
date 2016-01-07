@@ -2,26 +2,26 @@
 <html>
 <head>
 	<link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="styles/animate.css">
+	<link rel="stylesheet" type="text/css" href="styles/jquery.fullpage.css">
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 
 	<title>Star Crawl</title>
 
 </head>
 <body>
-<div class="container">
-		<div id="one" class="outerS1">
+<div class="container" id="fullpage">
+		<div id="one" class="outerS1 section">
 			<div class="innerS1">
 				<h2 class="fade" id="animation">A long long time ago, in a galaxy far far away... </h2> <!-- blue, left align, far, far should start new line -->
 			</div>
 		</div>
 <!--center -->
-	<div id="two">
+	<div id="two" class="section">
 		<div class="starwars">
 			<h1 class="star">Star </h1><br><h1 class="wars"> Wars</h1> <!--yellow, hollow, adjust kerning -->
 		</div>
 	</div>
-	<div id="three">
+	<div id="three" class="section">
 		<div class="outerS2">
 	<!--light yellow -->
 			<div class="innerS2">
@@ -65,6 +65,7 @@
 
 <!--jquery cdn -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/jquery.fullPage.js"></script>
 <script src="js/jquery.lettering.js"></script>
 
 
